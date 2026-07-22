@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Source Sans 3', sans-serif;
+  --font-heading: 'Archivo', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --color-mineral-white: #F3F2EE;
+  --color-pure-white: #FFFFFF;
+  --color-carbon-black: #0B0B0B;
+  --color-charcoal: #242424;
+  --color-graphite: #4B4B49;
+  --color-brushed-silver: #A7A8A5;
+  --color-stone-gray: #D7D5CF;
+  --color-technical-bronze: #A27B52;
+}
+
+body {
+  background-color: #E6E5E1;
+  color: var(--color-carbon-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
