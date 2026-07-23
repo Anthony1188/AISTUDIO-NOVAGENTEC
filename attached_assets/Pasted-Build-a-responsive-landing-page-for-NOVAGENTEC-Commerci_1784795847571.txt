@@ -1,0 +1,110 @@
+Build a responsive landing page for NOVAGENTEC Commercial Small Business using the same design language as the current NOVAGENTEC homepage.
+
+The page must feel like a direct continuation of the Commercial division card from the homepage.
+
+Structure
+same minimal header style as homepage
+hero with left text / right visual
+four-part services strip
+systems section
+industries section
+one clean CTA section
+minimal footer
+Hero copy
+
+Eyebrow: BUSINESS GROWTH INFRASTRUCTURE
+Headline: Build the systems that grow your business.
+Supporting text: NOVAGENTEC Commercial designs the brand, customer, and operational infrastructure that helps small businesses operate with clarity and scale with confidence.
+Primary CTA: Start the Conversation
+Secondary CTA: Explore Our Approach
+
+Service architecture
+
+Use four clean blocks:
+
+Launch
+Attract
+Operate
+Scale
+Systems section
+
+Show how NOVAGENTEC connects:
+
+website
+customer acquisition
+CRM
+scheduling
+automation
+follow-up
+reporting
+Design direction
+light mineral-white page
+brushed-silver details
+carbon-black typography
+subtle graphite drafting geometry
+premium business systems imagery
+consistent button styling with homepage
+no generic SaaS layout clichés
+PAGE 2 — NOVAGENTEC GOVERNMENT & AEROSPACE
+
+This page should feel like the continuation of the right homepage card.
+
+Government & Aerospace page strategy
+
+This page should communicate:
+
+Contract and Technical Infrastructure
+for:
+
+government contractors
+aerospace & defense suppliers
+industrial manufacturers
+engineering companies
+technical-service businesses
+
+It should feel:
+
+darker
+more institutional
+more industrial
+mission-ready
+highly credible
+engineered
+precise
+mature
+Suggested page structure
+1. Header
+
+Same skeleton as homepage, likely darker or integrated into a darker hero.
+
+2. Hero
+left text
+right image
+premium aerospace / defense-support visual
+3. Capability architecture
+
+Use:
+
+Prepare
+Pursue
+Win
+Perform
+4. Technical operations section
+
+Show:
+
+engineering
+manufacturing
+suppliers
+secure workflows
+quality & process
+mission execution
+5. Industries section
+government contractors
+industrial manufacturers
+aerospace & defense suppliers
+engineering companies
+technical-service businesses
+6. CTA
+
+Dark, mission-ready, restrained.

@@ -16,6 +16,7 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
       // Allow Replit's proxy hostname so the preview pane works.
       allowedHosts: true,
+      fs: { strict: false },
     },
   };
 });
