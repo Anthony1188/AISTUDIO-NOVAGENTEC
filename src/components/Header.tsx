@@ -3,10 +3,10 @@ import { LogoIcon } from './Logo';
 export function Header() {
   return (
     <header className="h-[80px] w-full flex items-center justify-between px-6 md:px-12 fixed top-0 z-50 bg-[#F3F2EE]/90 backdrop-blur-md border-b border-stone-gray/20">
-      <div className="flex items-center gap-4">
-        <LogoIcon className="h-5 w-auto text-carbon-black" />
-        <span className="font-heading font-semibold text-lg md:text-xl tracking-[0.2em] text-carbon-black uppercase">NOVAGENTEC</span>
-      </div>
+      <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
+        <LogoIcon className="h-[1.125rem] md:h-[1.25rem] w-auto text-carbon-black mr-[0.2em]" />
+        <span className="font-heading font-semibold text-lg md:text-xl tracking-[0.2em] text-carbon-black uppercase">OVAGENTEC</span>
+      </a>
       <nav className="hidden md:flex items-center gap-10 font-mono text-[10px] md:text-xs font-medium tracking-[0.15em] uppercase text-carbon-black">
         <a href="/commercial" className="hover:text-graphite transition-colors">Commercial</a>
         <a href="/government-aerospace" className="hover:text-graphite transition-colors">Government & Aerospace</a>
