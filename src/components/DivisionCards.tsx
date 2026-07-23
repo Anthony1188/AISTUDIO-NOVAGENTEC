@@ -38,7 +38,7 @@ export function DivisionCards() {
               {/* Identity */}
               <div className="flex-1">
                 <h2 className="font-heading text-xl md:text-2xl tracking-tight uppercase leading-tight mb-3 text-left font-extrabold text-[color:var(--color-graphite)]">
-                  Novagentec<br />Commercial<br />Small Business
+                  Commercial<br />Small Business
                 </h2>
                 <p className="font-mono text-[9px] tracking-[0.15em] text-graphite uppercase border-b border-stone-gray/30 pb-4 mb-6 inline-block">
                   For growing small businesses
@@ -105,7 +105,7 @@ export function DivisionCards() {
               {/* Identity */}
               <div className="flex-1">
                 <h2 className="font-heading text-xl md:text-2xl font-medium tracking-tight uppercase leading-tight mb-3 text-[#a27b52]">
-                  Novagentec<br />Government<br />& Aerospace
+                  Government<br />& Aerospace
                 </h2>
                 <p className="font-mono text-[9px] tracking-[0.15em] uppercase border-b border-technical-bronze/30 pb-4 mb-6 inline-block text-[color:var(--color-gray-50)]">
                   For contractors &amp; aerospace suppliers
