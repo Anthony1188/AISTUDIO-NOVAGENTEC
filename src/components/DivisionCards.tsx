@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import commercialBg from '../assets/images/commercial_card_bg_1784713078439.jpg';
 import govBg from '../assets/images/gov_aero_card_bg_1784713090507.jpg';
 import monogram from '../assets/images/novagentec-monogram.png';
+import wordmark from '../assets/images/novagentec-wordmark.png';
 
 const CAPABILITY_LABEL_BASE = 'flex-1 text-center font-mono text-[8px] tracking-[0.18em] uppercase py-2';
 
@@ -30,9 +31,10 @@ export function DivisionCards() {
             {/* Content */}
             <div className="relative z-10 p-8 md:p-10 flex flex-col min-h-[420px]">
 
-              {/* Monogram */}
-              <div className="mb-8">
-                <img src={monogram} alt="" className="w-8 h-8 object-contain opacity-60" />
+              {/* Monogram + Wordmark */}
+              <div className="mb-8 flex items-center gap-3">
+                <img src={monogram} alt="" className="w-10 h-10 object-contain opacity-60" />
+                <img src={wordmark} alt="NOVAGENTEC" className="h-[0.9rem] w-auto object-contain opacity-50" />
               </div>
 
               {/* Identity */}
@@ -92,12 +94,18 @@ export function DivisionCards() {
             {/* Content */}
             <div className="relative z-10 p-8 md:p-10 flex flex-col min-h-[420px]">
 
-              {/* Monogram */}
-              <div className="mb-8">
+              {/* Monogram + Wordmark */}
+              <div className="mb-8 flex items-center gap-3">
                 <img
                   src={monogram}
                   alt=""
-                  className="w-8 h-8 object-contain opacity-85"
+                  className="w-10 h-10 object-contain opacity-85"
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
+                <img
+                  src={wordmark}
+                  alt="NOVAGENTEC"
+                  className="h-[0.9rem] w-auto object-contain opacity-60"
                   style={{ filter: 'brightness(0) invert(1)' }}
                 />
               </div>
