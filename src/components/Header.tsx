@@ -1,15 +1,14 @@
-import { LogoIcon } from './Logo';
+import wordmark from '../assets/images/novagentec-wordmark.png';
 
 export function Header() {
   return (
     <header className="h-[80px] w-full flex items-center justify-between px-6 md:px-12 fixed top-0 z-50 bg-[#F3F2EE]/90 backdrop-blur-md border-b border-stone-gray/20">
-      <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
-        <LogoIcon className="h-[1.125rem] md:h-[1.25rem] w-auto text-carbon-black mr-[0.2em]" />
-        <span className="font-heading font-semibold text-lg md:text-xl tracking-[0.2em] text-carbon-black uppercase">OVAGENTEC</span>
+      <a href="/" className="flex items-center hover:opacity-70 transition-opacity">
+        <img src={wordmark} alt="NOVAGENTEC" className="h-[0.95rem] md:h-[1.05rem] w-auto object-contain" />
       </a>
       <nav className="hidden md:flex items-center gap-10 font-mono text-[10px] md:text-xs font-medium tracking-[0.15em] uppercase text-carbon-black">
         <a href="/commercial" className="hover:text-graphite transition-colors">Commercial</a>
-        <a href="/government-aerospace" className="hover:text-graphite transition-colors">Government & Aerospace</a>
+        <a href="/government-aerospace" className="hover:text-graphite transition-colors">Government &amp; Aerospace</a>
         <a href="#contact" className="px-8 py-3 border border-carbon-black hover:bg-carbon-black hover:text-pure-white transition-colors duration-300">
           Contact
         </a>
