@@ -58,66 +58,123 @@ export default function GovAeroPage() {
     <div className="w-full min-h-screen flex flex-col bg-[#0B0B0B] text-pure-white">
       <Header theme="dark" />
 
-      <main className="flex-1 pt-[80px]">
+      <main className="flex-1 pt-[72px]">
 
         {/* ── Hero ──────────────────────────────────────────── */}
-        <section className="relative w-full min-h-[90vh] flex items-stretch overflow-hidden bg-[#0B0B0B]">
+        {/*
+          Desktop: two-column flex-row — 43% copy / 57% image.
+          Mobile: stacked — text first, cropped image second.
+          No text overlaid on busy machinery on mobile.
+        */}
+        <section className="relative w-full bg-[#0B0B0B] flex flex-col md:flex-row md:min-h-[800px]">
 
-          {/* Technical drafting overlay */}
-          <div className="absolute inset-0 opacity-[0.06] pointer-events-none z-10">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="techGrid" width="60" height="60" patternUnits="userSpaceOnUse">
-                  <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#A27B52" strokeWidth="0.5" />
-                  <circle cx="0" cy="0" r="1" fill="#A27B52" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#techGrid)" />
-            </svg>
-          </div>
+          {/* ── Copy column ─────────────────────────────────── */}
+          <div className="relative z-10 flex flex-col justify-center
+                          w-full md:w-[43%]
+                          px-6 md:px-14 lg:px-20
+                          pt-20 pb-16 md:py-32
+                          bg-[#0B0B0B]">
 
-          {/* Right: hero image */}
-          <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] z-0">
-            <img
-              src={govHero}
-              alt="Government & Aerospace Infrastructure"
-              className="w-full h-full object-cover object-center"
-            />
-            {/* Dark gradient left fade */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0B0B0B] via-[#0B0B0B]/80 to-transparent" />
-            {/* Bottom fade */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/60 to-transparent" />
-          </div>
+            {/* Eyebrow: bronze rule + label */}
+            <div className="flex items-center gap-3 mb-7">
+              <div className="w-5 h-[1.5px] bg-technical-bronze flex-shrink-0" />
+              <p className="font-mono text-[8px] tracking-[0.26em] text-technical-bronze uppercase">
+                Contract and Technical Infrastructure
+              </p>
+            </div>
 
-          {/* Left: copy */}
-          <div className="relative z-20 flex flex-col justify-center w-full md:w-[52%] px-8 md:px-16 lg:px-20 py-28">
-            <p className="font-mono text-[9px] tracking-[0.22em] text-technical-bronze uppercase mb-6">
-              Contract and Technical Infrastructure
-            </p>
-            <h1 className="font-heading text-[2.4rem] md:text-5xl lg:text-[3rem] font-semibold tracking-tight text-pure-white uppercase leading-[1.06] mb-6">
-              Mission-ready<br />infrastructure<br />for what matters most.
+            {/* Headline */}
+            <h1 className="font-heading text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem]
+                           font-semibold tracking-tight text-pure-white uppercase
+                           leading-[1.04] mb-6">
+              Contract Readiness.<br />Mission Performance.
             </h1>
-            <div className="w-12 h-[2px] bg-technical-bronze mb-8" />
-            <p className="text-stone-gray font-light text-base md:text-lg leading-relaxed max-w-md mb-10">
-              NOVAGENTEC Government &amp; Aerospace builds the contract, technical, and operational systems that help capable organizations prepare, pursue, execute, and perform.
+
+            {/* Bronze rule */}
+            <div className="w-10 h-[2px] bg-technical-bronze mb-8" />
+
+            {/* Body */}
+            <p className="text-stone-gray/80 font-light text-[0.9rem] md:text-base
+                          leading-[1.75] max-w-[420px] mb-10">
+              NOVAGENTEC builds the strategic, technical, and operational infrastructure
+              that helps government contractors, aerospace suppliers, and engineering
+              organizations prepare, pursue, win, and perform.
             </p>
+
+            {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="#contact"
-                className="flex items-center gap-3 bg-technical-bronze text-carbon-black px-8 py-4 font-mono text-[10px] tracking-[0.2em] uppercase transition-opacity hover:opacity-85"
+                className="inline-flex items-center gap-3
+                           bg-technical-bronze text-carbon-black
+                           px-7 py-3.5
+                           font-mono text-[9px] tracking-[0.22em] uppercase
+                           transition-opacity duration-200 hover:opacity-85
+                           flex-shrink-0"
               >
                 Start the Conversation
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-3.5 h-3.5" />
               </a>
               <a
                 href="#approach"
-                className="flex items-center gap-3 border border-stone-gray/40 text-stone-gray px-8 py-4 font-mono text-[10px] tracking-[0.2em] uppercase transition-colors hover:border-technical-bronze hover:text-technical-bronze"
+                className="inline-flex items-center gap-3
+                           border border-technical-bronze/50 text-stone-gray
+                           px-7 py-3.5
+                           font-mono text-[9px] tracking-[0.22em] uppercase
+                           transition-colors duration-200
+                           hover:border-technical-bronze hover:text-technical-bronze
+                           flex-shrink-0"
               >
-                Explore Our Approach
-                <ArrowRight className="w-4 h-4" />
+                Explore Capabilities
+                <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>
+
+          {/* ── Visual column ───────────────────────────────── */}
+          {/*
+            Desktop: absolute fill of the right 57%.
+            Mobile: contained image block below the copy, fixed height.
+          */}
+          <div className="relative
+                          w-full h-[56vw] max-h-[420px]
+                          md:absolute md:right-0 md:top-0 md:bottom-0
+                          md:w-[57%] md:h-auto md:max-h-none
+                          overflow-hidden">
+
+            <img
+              src={govHero}
+              alt="Aerospace propulsion assembly in a precision manufacturing environment"
+              className="w-full h-full object-cover object-center"
+            />
+
+            {/* Left-to-right fade: copy stays readable, image breathes on the right */}
+            <div className="absolute inset-0
+                            bg-gradient-to-r
+                            from-[#0B0B0B] via-[#0B0B0B]/55 to-transparent
+                            md:block" />
+
+            {/* Subtle bottom fade on desktop only */}
+            <div className="hidden md:block absolute inset-0
+                            bg-gradient-to-t from-[#0B0B0B]/40 to-transparent" />
+
+            {/* Mobile: top fade so the transition into the copy block is seamless */}
+            <div className="md:hidden absolute inset-0
+                            bg-gradient-to-b from-[#0B0B0B]/30 to-transparent" />
+
+            {/* Subtle blueprint grid — decorative only, very low opacity */}
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-screen">
+              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="govHeroGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#A27B52" strokeWidth="0.5" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#govHeroGrid)" />
+              </svg>
+            </div>
+          </div>
+
         </section>
 
         {/* ── Capability Architecture ────────────────────────── */}
