@@ -1,20 +1,73 @@
-import { LogoIcon } from './Logo';
+import { BrandLogo } from './BrandLogo';
 
-export function Header() {
+interface HeaderProps {
+  theme?: 'light' | 'dark';
+}
+
+export function Header({ theme = 'light' }: HeaderProps) {
+  const isDark = theme === 'dark';
+
   return (
-    <header className="h-[80px] w-full flex items-center justify-between px-6 md:px-12 fixed top-0 z-50 bg-[#F3F2EE]/90 backdrop-blur-md border-b border-stone-gray/20">
-      <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
-        <LogoIcon className="h-[1.125rem] md:h-[1.25rem] w-auto text-carbon-black mr-[0.2em]" />
-        <span className="font-heading font-semibold text-lg md:text-xl tracking-[0.2em] text-carbon-black uppercase">OVAGENTEC</span>
+    <header
+      className={[
+        'h-[72px] w-full flex items-center justify-between px-8 md:px-12 fixed top-0 z-50 backdrop-blur-md',
+        isDark
+          ? 'bg-[#0d0d0d]/95 border-b border-[#242424]'
+          : 'bg-[#F3F2EE]/95 border-b border-stone-gray/20',
+      ].join(' ')}
+    >
+      <a
+        href="/"
+        aria-label="NOVAGENTEC home"
+        className="flex items-center hover:opacity-75 transition-opacity duration-200"
+      >
+        {isDark
+          ? <BrandLogo variant="government-header" />
+          : <BrandLogo variant="commercial-header" />
+        }
       </a>
-      <nav className="hidden md:flex items-center gap-10 font-mono text-[10px] md:text-xs font-medium tracking-[0.15em] uppercase text-carbon-black">
-        <a href="/commercial" className="hover:text-graphite transition-colors">Commercial</a>
-        <a href="/government-aerospace" className="hover:text-graphite transition-colors">Government & Aerospace</a>
-        <a href="#contact" className="px-8 py-3 border border-carbon-black hover:bg-carbon-black hover:text-pure-white transition-colors duration-300">
+
+      {/* Desktop nav */}
+      <nav
+        className={[
+          'hidden md:flex items-center gap-10 font-mono text-[10px] font-medium tracking-[0.15em] uppercase',
+          isDark ? 'text-stone-gray' : 'text-carbon-black',
+        ].join(' ')}
+      >
+        <a
+          href="/commercial"
+          className={isDark
+            ? 'hover:text-pure-white transition-colors'
+            : 'hover:text-graphite transition-colors'}
+        >
+          Commercial
+        </a>
+        <a
+          href="/government-aerospace"
+          className={isDark
+            ? 'hover:text-pure-white transition-colors'
+            : 'hover:text-graphite transition-colors'}
+        >
+          Government &amp; Aerospace
+        </a>
+        <a
+          href="#contact"
+          className={[
+            'px-6 py-2.5 border transition-colors duration-300',
+            isDark
+              ? 'border-technical-bronze text-technical-bronze hover:bg-technical-bronze hover:text-carbon-black'
+              : 'border-carbon-black text-carbon-black hover:bg-carbon-black hover:text-pure-white',
+          ].join(' ')}
+        >
           Contact
         </a>
       </nav>
-      <button className="md:hidden p-2 text-carbon-black" aria-label="Menu">
+
+      {/* Mobile hamburger */}
+      <button
+        className={`md:hidden p-2 ${isDark ? 'text-pure-white' : 'text-carbon-black'}`}
+        aria-label="Menu"
+      >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>

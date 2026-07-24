@@ -1,0 +1,256 @@
+Correct the NOVAGENTEC logo implementation throughout the website.
+
+This is a logo-placement correction task, not a brand redesign.
+
+Use only these approved production assets:
+
+Dark logo assets for mineral-white backgrounds:
+
+/assets/brand/novagentec-monogram-tight.png
+/assets/brand/novagentec-wordmark-tight.png
+
+Light logo assets for black and graphite backgrounds:
+
+/assets/brand/novagentec-monogram-white.png
+/assets/brand/novagentec-wordmark-white.png
+
+Do not use generated text as the NOVAGENTEC wordmark.
+Do not recreate the wordmark with a font.
+Do not generate a substitute logo.
+Do not alter the monogram geometry.
+Do not shrink the logos to generic navbar-icon dimensions.
+Do not place the logo inside a rounded container.
+Do not add a white box behind transparent logo files.
+Do not use the full master screenshot as a logo source.
+
+CREATE ONE REUSABLE BRAND LOGO COMPONENT
+
+Create a reusable BrandLogo component with these variants:
+
+1. commercial-header
+2. government-header
+3. light-footer
+4. dark-footer
+5. monogram-only
+6. compact-lockup
+
+The component must use actual image assets rather than text approximations.
+
+Use flex alignment for separate monogram and wordmark assets.
+Preserve image aspect ratios.
+Use width-based sizing rather than forcing both images into the same fixed height.
+Set flex-shrink: 0.
+Use object-fit: contain.
+Use object-position: left center.
+
+COMMERCIAL SMALL BUSINESS HEADER
+
+Match the uploaded Commercial Small Business page reference.
+
+Header height:
+Approximately 68px on desktop.
+
+Placement:
+Left aligned approximately 36–48px from the viewport edge.
+Vertically centered.
+
+Use:
+Dark monogram plus dark wordmark.
+
+Desktop sizing:
+
+Monogram visible height:
+40–46px
+
+Wordmark visible width:
+205–230px
+
+Gap between monogram and wordmark:
+12–16px
+
+Total visual lockup width:
+Approximately 260–295px
+
+The logo should be a major identity element in the header, not a tiny navigation icon.
+
+Do not constrain the complete lockup to 120px, 140px, or 160px.
+Do not set max-height below 36px.
+
+GOVERNMENT & AEROSPACE HEADER
+
+Match the uploaded dark Government & Aerospace reference.
+
+Header height:
+Approximately 52–58px on desktop.
+
+Use the white or mineral-white wordmark on the left.
+
+Desktop wordmark width:
+235–270px
+
+Visible wordmark height:
+Approximately 18–24px
+
+Left offset:
+36–44px
+
+Vertically center it in the header.
+
+Use the monogram beside the wordmark only when the reference layout specifically calls for the full lockup. Otherwise use the wide wordmark-only treatment shown in the Government & Aerospace reference.
+
+Do not use a tiny 100px wordmark.
+Do not use dark artwork on the black header.
+
+COMMERCIAL FOOTER
+
+Match the uploaded Commercial page reference.
+
+Footer logo should use:
+Dark monogram plus dark wordmark.
+
+Desktop total lockup width:
+190–220px
+
+Monogram visible height:
+27–34px
+
+Gap:
+9–12px
+
+Place the lockup approximately 36–48px from the left edge and vertically center it in the footer.
+
+The footer logo should be smaller than the header identity but still clearly readable.
+
+GOVERNMENT & AEROSPACE FOOTER
+
+Match the uploaded dark Government & Aerospace reference.
+
+Use:
+White monogram plus white wordmark.
+
+Desktop total lockup width:
+205–235px
+
+Place it approximately 36–44px from the left edge.
+
+Vertically center it inside the footer.
+
+Do not make it lower contrast than the footer navigation.
+Do not reduce its opacity below 80%.
+
+DIVISION CARDS AND CONTENT SECTIONS
+
+Do not place the full wordmark inside every card.
+
+Use the monogram only where it has a defined brand-system purpose.
+
+Approved monogram uses:
+
+- central connected-system hub: 72–96px visible size
+- small division-card corner identifier: 28–38px
+- subtle decorative hero mark: 34–44px
+- footer lockup: use monogram with wordmark
+- mobile navigation: 34–40px monogram if the full lockup cannot fit
+
+Do not repeat the monogram in every service card.
+Do not use it as a bullet icon.
+Do not add it randomly behind copy.
+Do not duplicate a monogram already embedded inside an approved background image.
+
+CONNECTED SYSTEMS SECTION
+
+For the Commercial Small Business connected-systems diagram, use the monogram as the central visual hub.
+
+Desktop visible size:
+Approximately 78–92px
+
+Place it inside a clean square system node approximately 120–145px wide.
+
+The monogram should be centered with generous but controlled padding.
+
+It should remain visually stronger than the surrounding individual capability icons.
+
+DARK GOVERNMENT HERO
+
+Use a small secondary white or bronze-tinted monogram only where shown in the reference, such as the lower-left hero detail.
+
+Visible size:
+Approximately 34–42px
+
+Opacity:
+70–100% depending on the exact reference placement.
+
+Do not add a second oversized logo over the turbine or aerospace image.
+
+RESPONSIVE SIZING
+
+Desktop above 1200px:
+
+Commercial full header lockup:
+260–295px total width
+
+Government wordmark:
+235–270px width
+
+Footer lockups:
+190–235px width
+
+Tablet:
+
+Commercial full header lockup:
+215–245px total width
+
+Government wordmark:
+205–230px width
+
+Footer lockups:
+175–205px width
+
+Mobile:
+
+Use the complete lockup when the available width permits.
+
+Recommended full lockup width:
+170–195px
+
+When the mobile header is too narrow, use:
+
+Monogram:
+36–40px
+
+Do not reduce the complete wordmark below approximately 165px and leave it unreadable. Switch intentionally to the monogram-only variant instead.
+
+TECHNICAL RULES
+
+Do not set arbitrary global rules such as:
+
+.logo img {
+  max-width: 120px;
+  max-height: 24px;
+}
+
+Use separate variant classes for header, footer, and monogram use.
+
+The logo link must include:
+
+aria-label="NOVAGENTEC home"
+
+Images must include useful alt text.
+
+Verify that every asset path resolves successfully.
+
+If a logo image fails to load, do not silently hide it. Show a development warning and correct the asset path.
+
+Do not finalize until these locations have been visually verified:
+
+1. Commercial desktop header
+2. Commercial mobile header
+3. Commercial footer
+4. Commercial connected-systems hub
+5. Government & Aerospace desktop header
+6. Government & Aerospace mobile header
+7. Government & Aerospace footer
+8. Any master two-division page header
+9. Any approved division-card monogram
+
+Compare every location directly with the supplied Commercial Small Business and Government & Aerospace reference screenshots.
