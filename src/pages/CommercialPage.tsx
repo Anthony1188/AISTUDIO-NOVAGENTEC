@@ -82,13 +82,13 @@ export default function CommercialPage() {
 
           {/* Left: copy */}
           <div className="relative z-10 flex flex-col justify-center w-full md:w-[48%] px-8 md:px-16 lg:px-20 py-24">
-            <p className="font-mono text-[9px] tracking-[0.22em] text-technical-bronze uppercase mb-6">
+            <p className="font-mono text-[9px] tracking-[0.22em] text-brushed-silver uppercase mb-6">
               Commercial Small Business
             </p>
             <h1 className="font-heading text-[2.4rem] md:text-5xl lg:text-[3.2rem] font-semibold tracking-tight text-carbon-black uppercase leading-[1.08] mb-6">
               Business Growth<br />Infrastructure.
             </h1>
-            <div className="w-12 h-[2px] bg-technical-bronze mb-8" />
+            <div className="w-12 h-[2px] bg-brushed-silver mb-8" />
             <p className="text-graphite font-light text-base md:text-lg leading-relaxed max-w-md mb-10">
               NOVAGENTEC Commercial designs the brand, customer, and operational infrastructure that helps small businesses operate with clarity and scale with confidence.
             </p>
@@ -149,14 +149,14 @@ export default function CommercialPage() {
 
             {/* Left: copy */}
             <div>
-              <p className="font-mono text-[9px] tracking-[0.22em] text-brushed-silver uppercase mb-6">Connected Systems</p>
+              <p className="font-mono text-[9px] tracking-[0.22em] text-brushed-silver/70 uppercase mb-6">Connected Systems</p>
               <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-tight text-carbon-black uppercase leading-tight mb-6">
                 One Connected<br />Growth<br />Infrastructure
               </h2>
               <p className="text-graphite font-light text-sm leading-relaxed mb-8 max-w-xs">
                 Your business runs smoother when everything is connected. We build integrated systems that work together, amplify results, and grow with you.
               </p>
-              <a href="#contact" className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-carbon-black border-b border-carbon-black pb-1 hover:text-technical-bronze hover:border-technical-bronze transition-colors">
+              <a href="#contact" className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-carbon-black border-b border-carbon-black pb-1 hover:text-brushed-silver hover:border-brushed-silver transition-colors">
                 See How It Works <ArrowRight className="w-3 h-3" />
               </a>
             </div>

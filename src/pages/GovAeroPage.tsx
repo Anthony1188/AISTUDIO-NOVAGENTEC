@@ -57,10 +57,7 @@ const industries = [
 export default function GovAeroPage() {
   return (
     <div className="w-full min-h-screen flex flex-col bg-[#0B0B0B] text-pure-white">
-      {/* Dark header override */}
-      <div className="[&_header]:bg-[#0d0d0d]/95 [&_header]:border-[#242424] [&_header_a]:text-pure-white [&_header_nav_a]:text-stone-gray [&_header_nav_a:hover]:text-pure-white [&_header_button]:text-pure-white [&_header_.border-carbon-black]:border-technical-bronze [&_header_.hover\\:bg-carbon-black]:hover:bg-technical-bronze">
-        <Header />
-      </div>
+      <Header theme="dark" />
 
       <main className="flex-1 pt-[80px]">
 
