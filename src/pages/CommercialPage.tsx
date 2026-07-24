@@ -2,8 +2,7 @@ import { ArrowRight, Rocket, Target, Settings, TrendingUp, Globe, Users, Calenda
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import commercialHero from '../assets/images/commercial_hero.jpg';
-import monogram from '../assets/images/novagentec-monogram.png';
-import wordmark from '../assets/images/novagentec-wordmark.png';
+import { BrandLogo } from '../components/BrandLogo';
 
 /* ─── Data ────────────────────────────────────────────────── */
 
@@ -177,12 +176,11 @@ export default function CommercialPage() {
                 ))}
               </div>
 
-              {/* Center hub */}
+              {/* Center hub — monogram as central system node */}
               <div className="flex flex-col items-center gap-2 px-2">
                 <div className="w-px h-8 bg-stone-gray/40" />
-                <div className="border border-stone-gray/50 bg-pure-white p-5 flex flex-col items-center gap-2">
-                  <img src={monogram} alt="" className="w-10 h-10 object-contain opacity-70" />
-                  <img src={wordmark} alt="NOVAGENTEC" className="h-[0.7rem] w-auto object-contain opacity-40" />
+                <div className="border border-stone-gray/50 bg-pure-white p-5 flex flex-col items-center gap-3">
+                  <BrandLogo variant="monogram-only" scheme="dark" size={40} className="opacity-70" />
                 </div>
                 <div className="w-px h-8 bg-stone-gray/40" />
                 <p className="font-mono text-[7px] tracking-[0.15em] text-brushed-silver uppercase text-center">Customer<br />Operations</p>

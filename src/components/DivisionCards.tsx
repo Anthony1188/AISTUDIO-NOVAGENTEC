@@ -1,10 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import commercialBg from '../assets/images/commercial_card_bg_1784713078439.jpg';
 import govBg from '../assets/images/gov_aero_card_bg_1784713090507.jpg';
-
-// Brand assets from public/ — served at runtime, no Vite import needed
-const MONOGRAM_TIGHT = '/assets/brand/novagentec-monogram-tight.png';
-const MONOGRAM_WHITE = '/assets/brand/novagentec-monogram-white.png';
+import { BrandLogo } from './BrandLogo';
 
 const CAPABILITY_LABEL_BASE = 'flex-1 text-center font-mono text-[8px] tracking-[0.18em] uppercase py-2';
 
@@ -33,9 +30,9 @@ export function DivisionCards() {
             {/* Content */}
             <div className="relative z-10 p-8 md:p-10 flex flex-col min-h-[420px]">
 
-              {/* Monogram */}
+              {/* Division identifier — dark monogram, 32px, light background */}
               <div className="mb-8">
-                <img src={MONOGRAM_TIGHT} alt="" aria-hidden="true" className="object-contain opacity-55" style={{ height: 32, width: 'auto' }} />
+                <BrandLogo variant="monogram-only" scheme="dark" size={32} className="opacity-55" />
               </div>
 
               {/* Identity */}
@@ -95,9 +92,9 @@ export function DivisionCards() {
             {/* Content */}
             <div className="relative z-10 p-8 md:p-10 flex flex-col min-h-[420px]">
 
-              {/* Monogram */}
+              {/* Division identifier — white monogram, 32px, dark background */}
               <div className="mb-8">
-                <img src={MONOGRAM_WHITE} alt="" aria-hidden="true" className="object-contain opacity-75" style={{ height: 32, width: 'auto' }} />
+                <BrandLogo variant="monogram-only" scheme="white" size={32} className="opacity-75" />
               </div>
 
               {/* Identity */}

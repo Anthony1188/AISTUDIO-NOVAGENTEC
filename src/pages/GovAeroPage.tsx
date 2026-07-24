@@ -2,8 +2,7 @@ import { ArrowRight, Shield, Crosshair, Trophy, Activity, Wrench, Factory, Truck
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import govHero from '../assets/images/gov_hero.jpg';
-import monogram from '../assets/images/novagentec-monogram.png';
-import wordmark from '../assets/images/novagentec-wordmark.png';
+import { BrandLogo } from '../components/BrandLogo';
 
 /* ─── Data ────────────────────────────────────────────────── */
 
@@ -196,12 +195,7 @@ export default function GovAeroPage() {
                 {/* Header bar */}
                 <div className="flex items-center justify-between mb-8 border-b border-[#242424] pb-6">
                   <div className="flex items-center gap-3">
-                    <img
-                      src={monogram}
-                      alt=""
-                      className="w-7 h-7 object-contain"
-                      style={{ filter: 'brightness(0) invert(1) opacity(0.6)' }}
-                    />
+                    <BrandLogo variant="monogram-only" scheme="white" size={28} className="opacity-60" />
                     <div>
                       <p className="font-mono text-[8px] tracking-[0.2em] text-brushed-silver uppercase">Program Overview</p>
                       <p className="font-mono text-[7px] tracking-[0.15em] text-[#3a3a3a] uppercase mt-0.5">Integrated Operations Dashboard</p>
@@ -232,12 +226,7 @@ export default function GovAeroPage() {
 
                 {/* Bottom bar */}
                 <div className="border-t border-[#1e1e1e] pt-5 flex items-center justify-between">
-                  <img
-                    src={wordmark}
-                    alt="NOVAGENTEC"
-                    className="h-[0.6rem] w-auto object-contain opacity-20"
-                    style={{ filter: 'brightness(0) invert(1)' }}
-                  />
+                  <BrandLogo variant="compact-lockup" className="opacity-20" />
                   <span className="font-mono text-[7px] tracking-[0.15em] text-[#2a2a2a] uppercase">Gov &amp; Aerospace Division</span>
                 </div>
               </div>
